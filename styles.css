@@ -282,9 +282,15 @@ html {
 }
 
 .masthead h1, .masthead .h1 { font-size: 4rem; margin: 0; padding: 0; }
-.masthead h3 { color: var(--color-beige) !important; }
+.masthead h3 { 
+    color: var(--color-beige) !important; 
+    font-size: clamp(1.2rem, 2vw, 2.5rem)
+}
 
-.home_logo { height: 10rem; animation: float 4s ease-in-out infinite;}
+.home_logo { 
+    height: clamp(7rem, 10vw, 14rem);
+    animation: float 4s ease-in-out infinite;
+}
 
 @media (min-width: 992px) { 
     .masthead { height: 100vh; } 
@@ -396,4 +402,49 @@ footer.footer .social-link:hover {
 .reveal.active {
     opacity: 1;
     transform: translateY(0);
+}
+
+/* ==========================================
+   AJUSTES PARA MÓVIL (hasta 768px)
+========================================== */
+
+@media (max-width: 768px) {
+    .title-game { 
+        font-size: 4rem !important; 
+    }
+    .masthead h3 { 
+        font-size: 1.2rem; 
+    }
+    
+    .home_logo { 
+        height: auto; 
+        max-width: 80%; 
+    }
+    .service-icon { 
+        height: auto; 
+        max-width: 60%; 
+        line-height: normal; 
+    }
+    .about-logo {
+        max-width: 150px; 
+    }
+    
+    .content-section { 
+        padding-top: 4rem; 
+        padding-bottom: 4rem; 
+    }
+    .bg-paper-texture { 
+        padding: 4rem 0;
+    }
+    .masthead { 
+        padding-top: 6rem; 
+        padding-bottom: 6rem; 
+        min-height: auto; 
+    }
+    
+    .btn-wishlist-giant {
+    font-size: 1.3rem !important; 
+    padding: 0.8rem 1rem !important; 
+    letter-spacing: 1px;
+    }
 }
